@@ -1,10 +1,11 @@
 import { useState, useEffect, useRef } from 'react';
 import React from 'react';
-import mapboxgl from 'mapbox-gl';
-import 'mapbox-gl/dist/mapbox-gl.css';
+import mapboxgl from 'mapbox-gl/dist/mapbox-gl'; 
 import './Map.css';
 import axios from 'axios';
 
+// eslint-disable-next-line import/no-webpack-loader-syntax
+mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
 
 mapboxgl.accessToken = process.env.REACT_APP_MAPBOX;
 
