@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import React from 'react';
-import mapboxgl from 'mapbox-gl/dist/mapbox-gl'; 
+// eslint-disable-next-line import/no-webpack-loader-syntax
+import mapboxgl from "!mapbox-gl";
 import './Map.css';
 import axios from 'axios';
 
