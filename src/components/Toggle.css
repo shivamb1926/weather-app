@@ -1,0 +1,14 @@
+.MuiSwitch-root {
+  height: 75px;
+  width: 150px;
+}
+.MuiSwitch-track {
+  border-radius: 30px;
+}
+.MuiSwitch-thumb {
+  width: 56px;
+  height: 56px;
+}
+.MuiSwitch-colorSecondary.Mui-checked {
+  transform: translateX(75px);
+}

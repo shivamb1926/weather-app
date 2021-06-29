@@ -1,0 +1,21 @@
+.App {
+  background-image: url("./img/karsten-wurth-0w-uTa0Xz7w-unsplash.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+.toggle-parent {
+  text-align: right;
+}
+
+.search-parent {
+  text-align: center;
+  padding: 10vh 10vw;
+}
+
+.card-parent {
+  padding: 1vh 10vw;
+}
