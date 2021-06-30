@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import React from 'react';
 // eslint-disable-next-line import/no-webpack-loader-syntax
 import mapboxgl from "mapbox-gl/dist/mapbox-gl-csp.js";
-import './Map.css';
+import './css/Map.css';
 import axios from 'axios';
 
 // eslint-disable-next-line import/no-webpack-loader-syntax
@@ -58,7 +58,6 @@ export default function Map(props) {
     return (
         <div>
             <div ref={mapContainer} className="map-container" />
-            <div id='info'>{currentCoords.lat}  {currentCoords.lng}</div>
         </div>
     )
 }

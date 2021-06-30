@@ -17,17 +17,27 @@ function App() {
     });
 
 
+
   return (
     <div className="App">
       <div className="toggle-parent">
+        <div>
+            <h1 className='heading'>WEATHER APP</h1>
+        </div>   
         <Toggle state={state} setState={setState}/>
       </div>
-      <div className="search-parent">
-        {!state.checkedA && <SearchBar searchCity={searchCity}/>}        
-      </div>
-      <div className="card-parent">
-            {!state.checkedA && <MainCard city={city}/>}
-            {state.checkedA && <Map state={state} setState={setState} searchCity={searchCity}/>}
+      {!state.checkedA &&
+        <div>
+            <div className="search-parent">
+                <SearchBar searchCity={searchCity}/>    
+            </div>
+            <div className="card-parent">
+                 <MainCard city={city}/>
+            </div>
+        </div>
+      }
+      <div className="map-parent">
+          {state.checkedA && <Map state={state} setState={setState} searchCity={searchCity}/>}
       </div>
     </div>
   );

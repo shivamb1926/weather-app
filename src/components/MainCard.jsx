@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { StylesProvider, ThemeProvider } from '@material-ui/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
@@ -6,7 +7,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import Alert from '@material-ui/lab/Alert';
 import axios from 'axios';
 
-import './MainCard.css';
+import './css/MainCard.css';
 
 export default function MainCard(props) {
 	let [weatherData, setWeatherData] = useState();
@@ -79,9 +80,12 @@ export default function MainCard(props) {
 	
 
 	return (
-    	<Card variant="outlined">
-            {status === true && <Alert severity="error">No such city exists</Alert>}
-            {weatherData === undefined ? <div className="loading"><CircularProgress /></div> : <WeatherInfo />}
-    	</Card>
+        <StylesProvider injectFirst>
+            <Card>
+                {status === true && <Alert severity="error">No such city exists</Alert>}
+                {weatherData === undefined ? <div className="loading"><CircularProgress /></div> : <WeatherInfo />}
+    	    </Card>
+        </StylesProvider>
+    	
   	);
 }

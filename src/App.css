@@ -9,6 +9,10 @@
 
 .toggle-parent {
   text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10vw;
 }
 
 .search-parent {
@@ -18,4 +22,12 @@
 
 .card-parent {
   padding: 1vh 10vw;
+}
+
+.map-parent {
+  padding: 0 1vw;
+}
+
+.heading {
+  color: white;
 }
